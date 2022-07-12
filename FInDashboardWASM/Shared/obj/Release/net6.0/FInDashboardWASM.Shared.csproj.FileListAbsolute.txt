@@ -1,0 +1,12 @@
+E:\Desktop\APBD\cwiczenia7_jd-BrunoKedzierski\FInDashboardWASM\FInDashboardWASM\Shared\bin\Release\net6.0\FInDashboardWASM.Shared.deps.json
+E:\Desktop\APBD\cwiczenia7_jd-BrunoKedzierski\FInDashboardWASM\FInDashboardWASM\Shared\bin\Release\net6.0\FInDashboardWASM.Shared.dll
+E:\Desktop\APBD\cwiczenia7_jd-BrunoKedzierski\FInDashboardWASM\FInDashboardWASM\Shared\bin\Release\net6.0\FInDashboardWASM.Shared.pdb
+E:\Desktop\APBD\cwiczenia7_jd-BrunoKedzierski\FInDashboardWASM\FInDashboardWASM\Shared\obj\Release\net6.0\FInDashboardWASM.Shared.csproj.AssemblyReference.cache
+E:\Desktop\APBD\cwiczenia7_jd-BrunoKedzierski\FInDashboardWASM\FInDashboardWASM\Shared\obj\Release\net6.0\FInDashboardWASM.Shared.GeneratedMSBuildEditorConfig.editorconfig
+E:\Desktop\APBD\cwiczenia7_jd-BrunoKedzierski\FInDashboardWASM\FInDashboardWASM\Shared\obj\Release\net6.0\FInDashboardWASM.Shared.AssemblyInfoInputs.cache
+E:\Desktop\APBD\cwiczenia7_jd-BrunoKedzierski\FInDashboardWASM\FInDashboardWASM\Shared\obj\Release\net6.0\FInDashboardWASM.Shared.AssemblyInfo.cs
+E:\Desktop\APBD\cwiczenia7_jd-BrunoKedzierski\FInDashboardWASM\FInDashboardWASM\Shared\obj\Release\net6.0\FInDashboardWASM.Shared.csproj.CoreCompileInputs.cache
+E:\Desktop\APBD\cwiczenia7_jd-BrunoKedzierski\FInDashboardWASM\FInDashboardWASM\Shared\obj\Release\net6.0\FInDashboardWASM.Shared.dll
+E:\Desktop\APBD\cwiczenia7_jd-BrunoKedzierski\FInDashboardWASM\FInDashboardWASM\Shared\obj\Release\net6.0\refint\FInDashboardWASM.Shared.dll
+E:\Desktop\APBD\cwiczenia7_jd-BrunoKedzierski\FInDashboardWASM\FInDashboardWASM\Shared\obj\Release\net6.0\FInDashboardWASM.Shared.pdb
+E:\Desktop\APBD\cwiczenia7_jd-BrunoKedzierski\FInDashboardWASM\FInDashboardWASM\Shared\obj\Release\net6.0\ref\FInDashboardWASM.Shared.dll

@@ -1,0 +1,102 @@
+﻿@page "/"
+
+@using FInDashboardWASM.Shared.Models
+@using Newtonsoft.Json
+@using Newtonsoft.Json.Linq
+@using Syncfusion.Blazor
+@using Syncfusion.Blazor.DropDowns
+@using Syncfusion.Blazor.ProgressBar
+@using System.Collections.ObjectModel
+@using System.Diagnostics.CodeAnalysis;
+@inject HttpClient Http
+@inject NavigationManager Man
+    
+
+
+
+
+<div class="columns is-mobile is-vcentered is-centered margin-bottom" style="height:80vh">
+  
+  
+
+@if (tickers == null)
+{
+ <div class="column is-half">   
+<SfProgressBar Type="ProgressType.Circular" Value="20" Height="120" IsIndeterminate="true">
+    <ProgressBarAnimation Enable="true"></ProgressBarAnimation>
+</SfProgressBar>
+
+ </div>
+}
+else{
+
+<div class="column is-one-quarter">  
+
+</div>
+ <div class="column is-half">  
+<SfAutoComplete TValue="string" TItem="string" Placeholder="Select a country" DataSource="@tickers" @bind-Value="@SelectedValue" >
+    
+</SfAutoComplete>
+</div>
+<div class="column is-one-quarter">  
+<button class="button is-small"  @onclick="GoToDashboard" >Go !</button>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+</div>
+
+
+
+
+
+@code {
+
+    public string SelectedValue { get; set; } 
+
+
+    private List<string> tickers;
+
+
+
+
+
+
+
+
+    protected override async Task OnInitializedAsync() {
+
+        var response = await Http.GetAsync("/api/CompanyData");
+
+
+
+
+        List<string> availableTickers = JsonConvert.DeserializeObject<List<string>>(await response.Content.ReadAsStringAsync());
+
+        tickers = availableTickers;
+    }
+
+
+    private void GoToDashboard() { 
+    
+           Man.NavigateTo("/Dashboard/" + SelectedValue.Split("-")[1].Trim());
+    
+    }
+
+
+     
+
+
+}

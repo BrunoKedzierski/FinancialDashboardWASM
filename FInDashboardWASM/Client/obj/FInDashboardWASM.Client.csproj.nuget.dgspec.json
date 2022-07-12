@@ -1,0 +1,164 @@
+{
+  "format": 1,
+  "restore": {
+    "E:\\Desktop\\APBD\\cwiczenia7_jd-BrunoKedzierski\\FInDashboardWASM\\FInDashboardWASM\\Client\\FInDashboardWASM.Client.csproj": {}
+  },
+  "projects": {
+    "E:\\Desktop\\APBD\\cwiczenia7_jd-BrunoKedzierski\\FInDashboardWASM\\FInDashboardWASM\\Client\\FInDashboardWASM.Client.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\Desktop\\APBD\\cwiczenia7_jd-BrunoKedzierski\\FInDashboardWASM\\FInDashboardWASM\\Client\\FInDashboardWASM.Client.csproj",
+        "projectName": "FInDashboardWASM.Client",
+        "projectPath": "E:\\Desktop\\APBD\\cwiczenia7_jd-BrunoKedzierski\\FInDashboardWASM\\FInDashboardWASM\\Client\\FInDashboardWASM.Client.csproj",
+        "packagesPath": "C:\\Users\\bruno\\.nuget\\packages\\",
+        "outputPath": "E:\\Desktop\\APBD\\cwiczenia7_jd-BrunoKedzierski\\FInDashboardWASM\\FInDashboardWASM\\Client\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\bruno\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "E:\\Desktop\\APBD\\cwiczenia7_jd-BrunoKedzierski\\FInDashboardWASM\\FInDashboardWASM\\Shared\\FInDashboardWASM.Shared.csproj": {
+                "projectPath": "E:\\Desktop\\APBD\\cwiczenia7_jd-BrunoKedzierski\\FInDashboardWASM\\FInDashboardWASM\\Shared\\FInDashboardWASM.Shared.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Components.WebAssembly": {
+              "target": "Package",
+              "version": "[6.0.3, )"
+            },
+            "Microsoft.AspNetCore.Components.WebAssembly.DevServer": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.3, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            },
+            "Syncfusion.Blazor": {
+              "target": "Package",
+              "version": "[20.2.0.36, )"
+            },
+            "Syncfusion.Blazor.Themes": {
+              "target": "Package",
+              "version": "[20.2.0.36, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.NETCore.App.Runtime.Mono.browser-wasm",
+              "version": "[6.0.6, 6.0.6]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
+        }
+      },
+      "runtimes": {
+        "browser-wasm": {
+          "#import": []
+        }
+      }
+    },
+    "E:\\Desktop\\APBD\\cwiczenia7_jd-BrunoKedzierski\\FInDashboardWASM\\FInDashboardWASM\\Shared\\FInDashboardWASM.Shared.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\Desktop\\APBD\\cwiczenia7_jd-BrunoKedzierski\\FInDashboardWASM\\FInDashboardWASM\\Shared\\FInDashboardWASM.Shared.csproj",
+        "projectName": "FInDashboardWASM.Shared",
+        "projectPath": "E:\\Desktop\\APBD\\cwiczenia7_jd-BrunoKedzierski\\FInDashboardWASM\\FInDashboardWASM\\Shared\\FInDashboardWASM.Shared.csproj",
+        "packagesPath": "C:\\Users\\bruno\\.nuget\\packages\\",
+        "outputPath": "E:\\Desktop\\APBD\\cwiczenia7_jd-BrunoKedzierski\\FInDashboardWASM\\FInDashboardWASM\\Shared\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\bruno\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.Extensions.Configuration.UserSecrets": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration": {
+              "target": "Package",
+              "version": "[6.0.6, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

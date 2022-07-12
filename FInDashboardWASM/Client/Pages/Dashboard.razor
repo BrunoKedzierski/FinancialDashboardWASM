@@ -1,0 +1,162 @@
+﻿@using FInDashboardWASM.Shared.Models
+@using FInDashboardWASM.Shared.Models
+@using Newtonsoft.Json
+@using Newtonsoft.Json.Linq
+@inject HttpClient Http
+@page "/Dashboard/{Ticker}"
+
+
+
+
+
+
+<div class="columns is-mobile is-vcentered is-centered margin-bottom" style="height:80vh"> 
+  
+ 
+  <div class="column is-one-quarter ">
+      
+
+      <div class="card">
+  <header class="card-header">
+    <p class="card-header-title">
+     Basic Info
+    </p>
+  </header>
+  <div class="card-content">
+    <div class="content">
+   
+        
+ @if (CompanyInfo == null) { 
+                    
+                    <SfProgressBar Type="ProgressType.Circular" Value="20" Height="50" IsIndeterminate="true">
+    <ProgressBarAnimation Enable="true"></ProgressBarAnimation>
+</SfProgressBar>
+                    
+                    }
+
+                    else{
+                    <ol>
+    <li>@CompanyInfo.Name</li>
+    <li>@CompanyInfo.Ticker</li>
+    <li>@CompanyInfo.Currency</li>
+    <li>@CompanyInfo.Locale</li>
+  </ol>
+                    }
+    </div>
+  </div>
+
+</div>
+
+   
+
+    
+  </div>  
+    
+  <div class="column is-half"> 
+
+       <div class="card">
+  <header class="card-header">
+    <p class="card-header-title">
+      OHLC
+    </p>
+    <button class="card-header-icon" aria-label="more options">
+      <span class="icon">
+        <i class="fas fa-angle-down" aria-hidden="true"></i>
+      </span>
+    </button>
+  </header>
+  <div class="card-content">
+    <div class="content">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris.
+  
+      <br>
+      <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+    </div>
+  </div>
+
+</div>
+
+     
+  </div>
+
+
+  <div class="column is-one-quarter "> 
+      
+
+       <div class="card">
+  <header class="card-header">
+    <p class="card-header-title">
+        News
+    </p>
+    <button class="card-header-icon" aria-label="more options">
+      <span class="icon">
+        <i class="fas fa-angle-down" aria-hidden="true"></i>
+      </span>
+    </button>
+  </header>
+  <div class="card-content">
+    <div class="content">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris.
+  
+      <br>
+      <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+    </div>
+  </div>
+
+</div>
+
+   
+    
+  </div>  
+
+</div>
+
+@code {
+
+
+
+    private string tickerPrev;
+
+    [Parameter]
+    public string Ticker { get; set; }
+
+
+    public CompanyData CompanyInfo { get; set; }
+
+
+
+    protected override void OnInitialized()
+    {
+        tickerPrev = Ticker;
+    }
+
+
+
+    protected override async Task OnParametersSetAsync() { 
+
+       
+
+
+            System.Console.WriteLine("Api Call");
+
+            var response = await Http.GetAsync($"/api/CompanyData/{Ticker}");
+
+
+
+
+
+            CompanyData data = JsonConvert.DeserializeObject<CompanyData>(await response.Content.ReadAsStringAsync());
+
+            CompanyInfo  =data ;
+
+            tickerPrev = Ticker;
+        
+    
+    
+    
+    }
+
+
+
+
+}

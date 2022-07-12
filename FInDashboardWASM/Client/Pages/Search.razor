@@ -1,0 +1,77 @@
+﻿
+@page "/search"
+@using FInDashboardWASM.Shared.Models
+@using Newtonsoft.Json
+@using Newtonsoft.Json.Linq
+@using Syncfusion.Blazor
+@using Syncfusion.Blazor.DropDowns
+@using Syncfusion.Blazor.ProgressBar
+@using System.Collections.ObjectModel
+@using System.Diagnostics.CodeAnalysis;
+@inject HttpClient Http
+    
+
+
+@if (tickers == null)
+{
+    
+<SfProgressBar Type="ProgressType.Circular" Value="20" Height="60" IsIndeterminate="true" >
+    <ProgressBarAnimation Enable="true"></ProgressBarAnimation>
+</SfProgressBar>
+
+
+}
+else{
+<SfAutoComplete TValue="string" TItem="CompanyData" Placeholder="Select a country" DataSource="@tickers">
+    
+      <AutoCompleteTemplates TItem="CompanyData">
+        <ItemTemplate>
+            <span>        <span class='name'>@((context as CompanyData).Name)</span>        <span class='ticker'>@((context as CompanyData).Ticker)</span>    </span>
+        </ItemTemplate>
+    </AutoCompleteTemplates>
+    
+    
+    
+    <AutoCompleteFieldSettings Value="Ticker"  />
+    <AutoCompleteFieldSettings Value="Name"  />
+   
+    
+</SfAutoComplete>
+}
+
+
+
+@code {
+
+
+    private int counter = 0;
+
+
+    private List<CompanyData> tickers;
+
+
+
+
+
+
+
+
+    protected override async Task OnInitializedAsync() {
+
+        var response = await Http.GetAsync("/api/CompanyData");
+
+
+            List<CompanyData> availableTickers = JsonConvert.DeserializeObject<List<CompanyData>>(await response.Content.ReadAsStringAsync());
+
+            tickers = availableTickers;
+    }
+
+
+
+
+
+
+
+   
+
+}
